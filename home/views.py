@@ -6,5 +6,6 @@ from django.shortcuts import settings
 def homepage(request):
     context={
         'restaurant_name': settings.RESTUARANT_NAME
+        'restuarant_phone':settings.RESTUARANT_PHONE
         }
         return render(request,'home.html',context)
