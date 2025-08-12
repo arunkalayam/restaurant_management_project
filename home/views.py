@@ -12,3 +12,11 @@ def homepage(request):
 
 def reservation(request):
     return render(request,'reservation.html')
+
+def menu_list(request):
+    try:
+        menu_items=["Pizza","Paste","Garlic Chutney"]
+    except DatabaseError:
+        menu_items=[]
+        error_message="Sorry we couldn't load menu"
+        return render(request,'menu.html')
