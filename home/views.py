@@ -9,3 +9,6 @@ def homepage(request):
         'restuarant_phone':settings.RESTUARANT_PHONE
         }
         return render(request,'home.html',context)
+
+def reservation(request):
+    return render(request,'reservation.html')
