@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-s^x_u!itekxd=@a3o3zv4d%hw$j6d#2v358wgltxl8rc(-^t&p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'],
 
 
 # Application definition
@@ -124,6 +124,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 RESTAURANT_NAME="Tastey"
 RESTAURANT_PHONE="90986756565"
+RESTAURANT_HOURS="Mon-Fri:11 am-9pm Sat-Sun 10 am 4pm"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
