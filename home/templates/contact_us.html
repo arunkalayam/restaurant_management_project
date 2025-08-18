@@ -4,7 +4,26 @@
     </head>
     <body style="font-size: 2px; font-family: Arial;">
         <h1>Contaxct us</h1>
-        <p><strong style="font-size: 2px color: blue;">Email:</strong>ark@gmail.com</p>
-        <p><strong style="font-size: 3px; color: black;">Contact:</strong>990078677565</p>
+        <form id="contact_form">
+            <div id="error msg" class="error"></div>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <input type="email" id="email" name="email" placeholder="Enter email">
+            <button type="submit">Send</button>
+        </form>
+        <script>
+            document.getElementById("contactform").addEventListener("submit",function(event){
+            let name=document.getElementById("name").value.trim();
+            let email=document.getElementById("email").value.trim();
+            let error msg=document.getElementById("error msg");
+            if (name ==="" || email ===""){
+            error msg.textContent="Please fill in both email and name";
+            event.preventDefault();
+
+            }else{
+            error msg.textContent="";
+            }
+            });
+            </script>
+    
     </body>
 </html>
