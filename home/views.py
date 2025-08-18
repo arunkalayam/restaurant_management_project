@@ -20,3 +20,8 @@ def menu_list(request):
         menu_items=[]
         error_message="Sorry we couldn't load menu"
         return render(request,'menu.html')
+
+def restuarant_info(request):
+    return{
+        "RESTUARANT_HOURS":getattr(settings,"RESTUARANT_HOURS", "Mon-Fri: 11am-9pm Sat-Sun:10 am-4pm")
+    }
