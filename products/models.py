@@ -8,3 +8,12 @@ class Item(models.Model):
 
     def __str__(self):
         return str(self.item_name)
+
+class Userprofile(models.Model):
+    user=models.OneToOneField(User,on_delete=models.CASCADE,related_name="profile")
+    name=models.CharField(max_length=50)
+    email=models.EmailField(blank=True,null=True)
+    phone=models.CharField(max_length=50,blank=True,null=True)
+
+    def__str__(self):
+        return str(self.name)
