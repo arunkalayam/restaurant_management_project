@@ -9,3 +9,7 @@ class ItemAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Item,ItemAdmin)
+
+class Menu_Admin(admin.ModelAdmin):
+    list_display("name","description","price")
+    
