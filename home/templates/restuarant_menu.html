@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Menu</title>
+        <style>
+            body{font-family:Arial,san serif ;,margin : 20px ;}
+            h1{text-align : center ;}
+            </style>
+            <body>
+                <h1>Our Menu</h1>
+                <div class="menu">
+                    {% for items in items_name %}
+                    <div class="name">
+                      <h3>  {items.name}</h3>
+                      <p>{items.descriptions}</p>
+                    </div>
+                    {% empty %}
+                    <p> No items at this m,oment</p>
+                    { % endfor %}
+                </div>
+            </body>
+    </head></html>
+
