@@ -24,4 +24,18 @@ def menu_list(request):
 def restuarant_info(request):
     return{
         "RESTUARANT_HOURS":getattr(settings,"RESTUARANT_HOURS", "Mon-Fri: 11am-9pm Sat-Sun:10 am-4pm")
+        
     }
+def menu_list(request):
+    menu=[
+        {
+            "name": "Pizza",
+            "description": "Very Cheap",
+        },
+        {
+            "name": "Rice",
+            "description": "Very Good",
+
+        }
+    ]
+      return response(menu)
