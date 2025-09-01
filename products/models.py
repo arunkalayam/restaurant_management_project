@@ -36,3 +36,10 @@ class MenuItems(models.Model):
     price=models.DecimalField(max_digits=8,decimal_places=2)
     def__str__(self):
         return str(self.price)
+    
+class ContactForm(models.Model):
+    name=models.CharField(max_length=50)
+    email=models.EmailField()
+    submitted_at=models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return __str__(self.email)
